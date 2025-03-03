@@ -22,7 +22,7 @@ Configure Redis credentials and Google API key in `.env` file.
 
 ```shell
 # Download the source code
-git clone git@github.com:github.com/Innoractive/chippiphone.git
+git clone git@github.com:Innoractive/chippiphone.git
 # Instantlly run the application
 cd chippiphone
 go run cmd/main.go
