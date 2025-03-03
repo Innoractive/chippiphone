@@ -18,12 +18,14 @@ within that area and displays information (name, phone number, address).
 
 ### Executing Program
 
-Configure Redis credentials and Google API key in `.env` file.
-
 ```shell
 # Download the source code
 git clone git@github.com:Innoractive/chippiphone.git
-# Instantlly run the application
+```
+
+Configure Redis credentials and Google API key in `.env` file.
+
+```shell
 cd chippiphone
 go run cmd/main.go
 ```
