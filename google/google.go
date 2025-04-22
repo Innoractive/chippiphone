@@ -16,7 +16,7 @@ import (
 	"github.com/gofiber/fiber/v2/log"
 )
 
-// Search for F&B within 2 KM radius of a given position.
+// Search for F&B within 500m radius of a given position.
 // Uses [Nearby Search API](https://bit.ly/4hblK6t).
 func Nearby(latitude float64, longitude float64, apiKey string) ([]nearby.Place, error) {
 	// Ref: https://bit.ly/4hN95rH
@@ -35,7 +35,7 @@ func Nearby(latitude float64, longitude float64, apiKey string) ([]nearby.Place,
 	// Specifies the maximum number of place results to return. Must be between 1 and 20 (default) inclusive.
 	maxResultCount := 20
 	// Radius in meters
-	radius := 2000.0
+	radius := 500.0
 	requestBody := fmt.Sprintf(requestTemplate, maxResultCount, latitude, longitude, radius)
 	req, err := http.NewRequest(http.MethodPost, "https://places.googleapis.com/v1/places:searchNearby", bytes.NewBuffer([]byte(requestBody)))
 	if err != nil {
